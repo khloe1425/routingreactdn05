@@ -7,6 +7,9 @@ import About from './pages/About/About';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Header from './components/Header/Header';
+import UseStateDemo from './Hook/UseStateDemo/UseStateDemo';
+import UseEffectDemo from './Hook/UseEffectDemo/UseEffectDemo';
+import CommentApp from './Hook/CommentApp/CommentApp';
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
           <Route exact path="/home" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
+          <Route exact path="/usestate" component={UseStateDemo} />
+          <Route exact path="/useeffect" component={UseEffectDemo} />
+          <Route exact path="/commentapp" component={CommentApp} />
         </Switch>
 
 

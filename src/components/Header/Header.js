@@ -12,18 +12,35 @@ export default function Header() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <NavLink  activeClassName='myActive' activeStyle={{color:"red", backgroundColor:"yellow" }}    className="nav-link" to="/home">Home</NavLink>
+                            <NavLink activeClassName='myActive' activeStyle={{ color: "red", backgroundColor: "yellow" }} className="nav-link" to="/home">Home</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink activeClassName='myActive' activeStyle={{color:"red", backgroundColor:"yellow" }}  className="nav-link" to="/about">About</NavLink>
+                            <NavLink activeClassName='myActive' activeStyle={{ color: "red", backgroundColor: "yellow" }} className="nav-link" to="/about">About</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink activeClassName='myActive'  activeStyle={{color:"red", backgroundColor:"yellow" }}  className="nav-link" to="/login">Login</NavLink>
+                            <NavLink activeClassName='myActive' activeStyle={{ color: "red", backgroundColor: "yellow" }} className="nav-link" to="/login">Login</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink activeClassName='myActive' activeStyle={{color:"red", backgroundColor:"yellow" }} className="nav-link" to="/register">Register</NavLink>
+                            <NavLink activeClassName='myActive' activeStyle={{ color: "red", backgroundColor: "yellow" }} className="nav-link" to="/register">Register</NavLink>
                         </li>
-                     
+                        <li className="nav-item dropdown">
+
+                            <NavLink activeClassName='myActive' activeStyle={{ color: "red", backgroundColor: "yellow" }}
+                                className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" to="/">Hook</NavLink>
+
+                            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <NavLink className="dropdown-item"
+                                    to="/usestate">UseState</NavLink>
+                                <div className="dropdown-divider" />
+                                <NavLink className="dropdown-item"
+                                    to="/useeffect">UseEffect</NavLink>
+                                    <div className="dropdown-divider" />
+                                <NavLink className="dropdown-item"
+                                    to="/commentapp">CommentApp</NavLink>
+                            </div>
+                        </li>
+
+
                     </ul>
                     <form className="form-inline my-2 my-lg-0">
                         <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
