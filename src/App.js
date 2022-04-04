@@ -10,6 +10,8 @@ import Header from './components/Header/Header';
 import UseStateDemo from './Hook/UseStateDemo/UseStateDemo';
 import UseEffectDemo from './Hook/UseEffectDemo/UseEffectDemo';
 import CommentApp from './Hook/CommentApp/CommentApp';
+import AxiosClassComp from './AxiosDemo/AxiosClassComp';
+import AxiosFunctionComp from './AxiosDemo/AxiosFunctionComp';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route exact path="/usestate" component={UseStateDemo} />
           <Route exact path="/useeffect" component={UseEffectDemo} />
           <Route exact path="/commentapp" component={CommentApp} />
+          <Route exact path="/axiosrcc" component={AxiosClassComp} />
+          <Route exact path="/axiosrfc" component={AxiosFunctionComp} />
         </Switch>
 
 
