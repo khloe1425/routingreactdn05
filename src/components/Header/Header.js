@@ -48,12 +48,17 @@ export default function Header() {
 
                                 <NavLink className="dropdown-item"
                                     to="/axiosrcc">AxiosClassComp</NavLink>
-                                    
+
                                 <div className="dropdown-divider" />
 
                                 <NavLink className="dropdown-item"
                                     to="/axiosrfc">AxiosFunctionComp</NavLink>
-                                
+                                    
+                                <div className="dropdown-divider" />
+
+                                <NavLink className="dropdown-item"
+                                    to="/axiosware">AxiosMiddleware</NavLink>
+
                             </div>
                         </li>
 

@@ -12,6 +12,7 @@ import UseEffectDemo from './Hook/UseEffectDemo/UseEffectDemo';
 import CommentApp from './Hook/CommentApp/CommentApp';
 import AxiosClassComp from './AxiosDemo/AxiosClassComp';
 import AxiosFunctionComp from './AxiosDemo/AxiosFunctionComp';
+import AxiosMiddleware from './AxiosDemo/AxiosMiddleware';
 
 function App() {
   return (
@@ -30,8 +31,10 @@ function App() {
           <Route exact path="/commentapp" component={CommentApp} />
           <Route exact path="/axiosrcc" component={AxiosClassComp} />
           <Route exact path="/axiosrfc" component={AxiosFunctionComp} />
+          <Route exact path="/axiosware" component={AxiosMiddleware} />
+       
         </Switch>
-
+                
 
       </div>
     </BrowserRouter>
