@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
-
+import { Prompt } from 'react-router-dom';
 
 export default function Login(props) {
 
   console.log(props)
-  let [user,setUserAccount] = useState({});
+  let [user,setUserAccount] = useState({
+    username:'',
+    password:'',
+    isSaveForm:true
+  });
   console.log(user)
   const hanleInput = (event) => {
       let {value,name} = event.target;
@@ -18,8 +22,15 @@ export default function Login(props) {
   const handleSubmit = (event) => {
       event.preventDefault();
       if(user.username ==="cyber"){
-          //đăng thành công
-          props.history.push("/home");
+          //đăng nhap thành công
+          // Home1 -> Login push Home2
+          // => back tro lai Login
+          // props.history.push("/home");
+
+
+          //Home1 -> Login replace Home2
+          //=> back tro lai Home1
+          props.history.replace("/home");
       }else{
 
         alert("Tài khoản không đúng")
@@ -44,6 +55,16 @@ export default function Login(props) {
            }} name="password" type="password" className="form-control" id="exampleInputPassword1" />
         </div>
         <button type="submit" className="btn btn-primary">Submit</button>
+        
+        <button onClick={() => { 
+            props.history.goBack();
+         }} type="button" className="btn btn-primary">Go Back</button>
+     
+         <Prompt when={user.isSaveForm} message={(location) => { 
+            console.log(location);
+            return "Bạn có chắc muốn rời khỏi không ?"
+          }} />
+
       </form>
 
     </div>
