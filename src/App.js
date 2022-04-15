@@ -21,6 +21,7 @@ import { UserTemplate } from './template/UserTemplate';
 import AntdDemo from './pages/AntdDemo/AntdDemo';
 
 import 'antd/dist/antd.css';
+import { AdminTemplate } from './template/AdminTemplate';
 
 function App() {
   return (
@@ -50,7 +51,7 @@ function App() {
           <UserTemplate path="/login" component={Login} />
           <UserTemplate path="/register" component={Register} />
           
-          <Route exact path="/antd" component={AntdDemo} />
+          <AdminTemplate path="/antd" component={AntdDemo} />
           
           <Route exact path="/usestate" component={UseStateDemo} />
           <Route exact path="/useeffect" component={UseEffectDemo} />
