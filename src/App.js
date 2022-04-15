@@ -23,9 +23,15 @@ import AntdDemo from './pages/AntdDemo/AntdDemo';
 import 'antd/dist/antd.css';
 import { AdminTemplate } from './template/AdminTemplate';
 
+// thu vien giup chuyen huong trang o bat ky file code
+import { createBrowserHistory } from 'history';
+import { Router } from 'react-router-dom';
+export const history = createBrowserHistory();
+
 function App() {
   return (
-    <BrowserRouter>
+    // BrowserRouter
+    <Router history={history} >
       <div className="App container">
 
 
@@ -74,7 +80,7 @@ function App() {
 
 
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
